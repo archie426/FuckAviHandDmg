@@ -20,7 +20,7 @@ namespace FuckAviHandDmg
 
         private void DamageToolOndamagePlayerRequested(ref DamagePlayerParameters parameters, ref bool shouldallow)
         {
-            if (parameters.cause != EDeathCause.GUN || parameters.cause != EDeathCause.MELEE || !shouldallow)
+            if ((parameters.cause != EDeathCause.GUN && parameters.cause != EDeathCause.MELEE) || !shouldallow)
                 return;
 
             var playerParameters = parameters;
